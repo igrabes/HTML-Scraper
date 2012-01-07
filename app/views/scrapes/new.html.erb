@@ -1,0 +1,25 @@
+<table>
+	      <tr>
+          <td>ID:</td>
+					<td>Title:</td>
+					<td>URL:</td>
+					<td>Image:</td>
+					<td>Post Date:</td>
+				</tr>
+	
+			 <% @scrapes.each do |s| %>
+				<tr>
+					<td><%= s[:id] %></td> 
+			 	  <td><%= s[:title] %></td>
+					<td><%= s[:url] %></td>
+					<td><%= s[:image] %></td> 
+					<td><%= s[:post_date] %></td>
+				 </tr> 
+			 <% end %>
+</table>
+
+
+
+<%= form_for(@scrape) do |f| %>                 
+	<%= f.submit %>
+<% end %>

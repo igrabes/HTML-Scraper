@@ -1,0 +1,26 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>  
+
+<table>
+	      <tr>
+					<td>Title:</td>
+					<td>ID:</td>
+					<td>URL:</td>
+					<td>Image:</td>
+					<td>Post Date:</td>
+				</tr>
+	
+			 <% @scraped.each do |s| %>
+				<tr>
+			 	  <td><%= s.title  %></td>
+		 			<td><%= s.id %></td>
+					<td><%= s.url %></td>
+					<td><%= s.image %></td> 
+					<td><%= s.post_date %></td>
+				 </tr> 
+			 <% end %>
+</table> 
+               
+<%= @scraped.count %> 
+<%= @scraped[0].inspect %>
+  
